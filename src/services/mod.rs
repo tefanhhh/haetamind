@@ -1,14 +1,11 @@
-pub mod user_service;
+pub mod hasher_service;
 
 use actix_web::web;
 
-pub fn config_users(cfg: &mut web::ServiceConfig) {
+pub fn config_hasher(cfg: &mut web::ServiceConfig) {
     cfg.service(
-        web::scope("users")
-            .service(user_service::create)
-            .service(user_service::find_all)
-            .service(user_service::find_one)
-            .service(user_service::update)
-            .service(user_service::delete),
+        web::scope("hasher")
+            .service(hasher_service::do_hash)
+            .service(hasher_service::do_verify),
     );
 }
