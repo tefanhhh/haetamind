@@ -8,4 +8,5 @@ actix-multipart = "0.7.2"
 actix-web = "4.9.0"
 bcrypt = "0.16.0"
 futures-util = "0.3.31"
+image = { version = "0.25.5", features = ["avif-native"] }
 serde = { version = "1.0.217", features = ["derive"] }
